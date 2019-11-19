@@ -1,6 +1,6 @@
-let a = 3,
-    b = 2,
-    c = 1;
+let a = 150,
+    b = 10,
+    c = 20;
 console.log(a + b)
 console.log(a - b)
 console.log(a * b)
@@ -22,4 +22,9 @@ if (a > 0) {
     console.log("positive");
 } else if (a < 0) {
     console.log("negative");
+}
+if (a + b + c == 180) {
+    console.log(true)
+} else
+    console.log(false)
 }
