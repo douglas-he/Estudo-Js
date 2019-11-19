@@ -23,6 +23,7 @@ if (a > 0) {
 } else if (a < 0) {
     console.log("negative");
 }
+
 if (a + b + c == 180) {
     console.log(true);
 } else {
