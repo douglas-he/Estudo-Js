@@ -18,3 +18,8 @@ if (a > b && a > c) {
 } else if (c > a && c > b) {
     console.log(c);
 }
+if (a > 0) {
+    console.log("positive");
+} else if (a < 0) {
+    console.log("negative");
+}
