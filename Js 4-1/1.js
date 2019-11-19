@@ -72,10 +72,15 @@ if (Porcentagem > -1 && Porcentagem < 101) {
     console.log('valor invalido')
 }
 
-let d = 1,
-    e = 5,
-    f = 3;
+let d = 2,
+    e = 4,
+    f = 6;
 if (d % 2 == 0 || e % 2 == 0 || f % 2 == 0) {
+    console.log('true');
+} else {
+    console.log('false');
+}
+if (d % 2 != 0 || e % 2 != 0 || f % 2 != 0) {
     console.log('true');
 } else {
     console.log('false');
