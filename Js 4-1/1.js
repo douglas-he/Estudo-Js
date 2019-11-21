@@ -1,6 +1,7 @@
 let a = 150,
     b = 10,
     c = 20;
+
 console.log(a + b)
 console.log(a - b)
 console.log(a * b)
