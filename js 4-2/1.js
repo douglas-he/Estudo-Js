@@ -1,6 +1,6 @@
-let n = 5,
+let n = 7,
     o = '*';
-for (let i = 0; i < n; i++) {
+for (let i = 1; i < n; i++) {
     o += '*';
 }
 for (let i = 0; i < n; i++) {
