@@ -1,8 +1,8 @@
 let venda = 1000,
-    valor = 20;
+    valor;
 
 
-if (valor < 0 || venda < 0) {
+if (valor != undefined) {
     console.log('valor invalido');
 } else {
     console.log((venda * valor) - (venda * valor) * (20 / 100));
