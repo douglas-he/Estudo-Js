@@ -61,30 +61,40 @@
     <script>
         let titulo = document.createElement("h1");
         let paiBody = document.querySelector("body");
+        let barra = document.createElement("div");
+        let centralDiv = document.createElement("div");
+        let text = document.createElement("p");
+        let leftDiv = document.createElement("div");
+        let rightDiv = document.createElement("div");
+        let image = document.createElement("img");
+        let lista = document.createElement("ul");
+        let li = document.createElement("li");
         titulo.innerHTML = "Exercício 3.4 - JavaScript DOM";
         paiBody.appendChild(titulo);
-        let barra = document.createElement("div");
+        titulo.className = ("class", "title")
+
         paiBody.appendChild(barra);
         barra.className = ("class", "main-content");
-        let centralDiv = document.createElement("div");
+
         barra.appendChild(centralDiv);
         centralDiv.className = ("class", "center-content");
-        let text = document.createElement("p");
+        centralDiv.style.backgroundColor = "green";
+
         text.innerHTML = "TRYBE"
         centralDiv.appendChild(text);
-        let leftDiv = document.createElement("div");
+
         barra.appendChild(leftDiv);
         leftDiv.className = ("class", "left-content");
-        let rightDiv = document.createElement("div");
+
         barra.appendChild(rightDiv);
         rightDiv.className = ("class", "right-content");
-        let image = document.createElement("img");
+        rightDiv.style.marginRight = "auto";
+
         image.src = "https://picsum.photos/200";
         leftDiv.appendChild(image);
         image.className = ("class", "small-image");
-        let lista = document.createElement("ul");
+
         rightDiv.appendChild(lista);
-        let li = document.createElement("li");
         criaLi("Um", lista);
         criaLi("Dois", lista);
         criaLi("Tres", lista);
@@ -95,13 +105,12 @@
         criaLi("Oito", lista);
         criaLi("Nove", lista);
         criaLi("Dez", lista);
+
         h3(barra);
         h3(barra);
         h3(barra);
-        titulo.className = ("class", "title")
+
         barra.removeChild(leftDiv);
-        rightDiv.style.marginRight = "auto";
-        centralDiv.style.backgroundColor = "green";
         lista.lastChild.remove();
         lista.lastChild.remove();
 
