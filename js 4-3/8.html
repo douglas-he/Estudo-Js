@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 3.3</title>
+
+    <style>
+        div {
+            border-color: black;
+            border-style: solid;
+        }
+        
+        .title {
+            text-align: center;
+        }
+        
+        .main-content {
+            background-color: yellow;
+        }
+        
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin: 0 auto;
+        }
+        
+        .main-content .center-content p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Exercício 3.3 - JavaEscripito </h1>
+    <div class="main-content">
+        <div class="center-content">
+            <p>Texto padrão do nosso site</p>
+            <p>-----</p>
+            <p>Trybe</p>
+        </div>
+    </div>
+    <script>
+        function mudaTexto(texto) {
+            document.getElementsByTagName("p")[0].innerHTML = texto;
+        }
+        mudaTexto("Desenvolvedor");
+
+        function mudaCor(cor) {
+            document.getElementsByClassName("main-content")[0].style.backgroundColor = cor;
+        }
+        mudaCor("green");
+
+        function corCentral(cor) {
+            document.getElementsByClassName("center-content")[0].style.backgroundColor = cor;
+        }
+        corCentral("white")
+
+        function text(text) {
+            document.getElementsByClassName("title")[0].innerHTML = text;
+        }
+        text("Exercício 3.3 - JavaScript")
+
+        function mudarMaiscula(tag) {
+            tamanhoTag = document.getElementsByTagName(tag).length
+            for (i = 0; i < tamanhoTag; i++) {
+                var texto = document.getElementsByTagName(tag)[i].innerHTML
+                texto = texto.toUpperCase();
+                document.getElementsByTagName(tag)[i].innerHTML = texto;
+            }
+        }
+        mudarMaiscula("p");
+
+        function exibirConsole(tag) {
+            tamanhoTag = document.getElementsByTagName(tag).length
+            for (i = 0; i < tamanhoTag; i++) {
+                console.log(document.getElementsByTagName(tag)[i].innerHTML);
+            }
+        }
+        exibirConsole("p");
+
+        //   Crie uma função que modifique todo o texto da tag < p > para maiúsculo.
+        //   Crie uma função que exiba o conteúdo de todas as tags < p > no console.
+    </script>
+</body>
+
+</html>
