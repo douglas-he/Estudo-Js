@@ -59,16 +59,16 @@
 
 <body>
     <script>
-        let titulo = document.createElement("h1");
-        let paiBody = document.querySelector("body");
-        let barra = document.createElement("div");
-        let centralDiv = document.createElement("div");
-        let text = document.createElement("p");
-        let leftDiv = document.createElement("div");
-        let rightDiv = document.createElement("div");
-        let image = document.createElement("img");
-        let lista = document.createElement("ul");
-        let li = document.createElement("li");
+        let titulo = criaElemento("h1"),
+            paiBody = document.querySelector("body"),
+            barra = criaElemento("div"),
+            centralDiv = criaElemento("div"),
+            text = criaElemento("p"),
+            leftDiv = criaElemento("div"),
+            rightDiv = criaElemento("div"),
+            image = criaElemento("img"),
+            lista = criaElemento("ul"),
+            li = criaElemento("li");
         titulo.innerHTML = "Exercício 3.4 - JavaScript DOM";
         paiBody.appendChild(titulo);
         titulo.className = ("class", "title")
@@ -114,6 +114,9 @@
         lista.lastChild.remove();
         lista.lastChild.remove();
 
+        function criaElemento(estilo) {
+            return document.createElement(estilo);
+        }
 
         function h3(barra) {
             let h3 = document.createElement("h3");
