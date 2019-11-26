@@ -57,13 +57,20 @@
         let botao3 = document.getElementById("percent-button");
         botao3.addEventListener('click', function() {
             resultado.innerHTML = percent1.value + ' is ' + percentOf(percent1.value, percent2.value) + '% of ' + percent2.value;
-
         })
         percent1.addEventListener('keyup', function() {
             resultado.innerHTML = percent1.value + ' is ' + percentOf(percent1.value, percent2.value) + '% of ' + percent2.value;
         })
         percent2.addEventListener('keyup', function() {
             resultado.innerHTML = percent1.value + ' is ' + percentOf(percent1.value, percent2.value) + '% of ' + percent2.value;
+        })
+        let area = document.getElementById("area-input");
+        area.addEventListener('keyup', function() {
+            resultado.innerHTML = 'The area of circle with radius ' + this.value + ' is ' + areaOfCircle(this.value)
+        })
+        let botao4 = document.getElementById("area-button");
+        botao4.addEventListener('click', function() {
+            resultado.innerHTML = 'The area of circle with radius ' + area.value + ' is ' + areaOfCircle(area.value)
         })
 
         function squareNumber(num) {
@@ -87,13 +94,6 @@
             var area = Math.PI * squareNumber(radius);
             console.log('The area of circle with radius ' + radius + ' is ' + area);
             return area;
-        }
-
-        function doCrazyStuff(num) {
-            var half = halfOf(num);
-            var squared = squareNumber(half);
-            var area = areaOfCircle(squared);
-            var result = percentOf(squared, area);
         }
     </script>
 
