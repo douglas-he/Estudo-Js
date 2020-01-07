@@ -62,15 +62,10 @@
         }
         text("Exercício 3.3 - JavaScript")
 
-        function mudarMaiscula(tag) {
-            tamanhoTag = document.getElementsByTagName(tag).length
-            for (i = 0; i < tamanhoTag; i++) {
-                var texto = document.getElementsByTagName(tag)[i].innerHTML
-                texto = texto.toUpperCase();
-                document.getElementsByTagName(tag)[i].innerHTML = texto;
-            }
+        function maiusculo() {
+            document.getElementsByTagName("p")[0].innerHTML = document.getElementsByTagName("p")[0].innerHTML.toUpperCase();
         }
-        mudarMaiscula("p");
+        maiusculo();
 
         function exibirConsole(tag) {
             tamanhoTag = document.getElementsByTagName(tag).length

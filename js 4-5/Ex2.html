@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+    <button id="square-button">Calculate</button>
+    <br><br>
+
+    <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+    <button id="half-button">Calculate</button>
+    <br><br>
+
+    <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+    <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+    <button id="percent-button">Calculate</button>
+    <br><br>
+
+    <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+    <button id="area-button">Calculate</button>
+    <br><br>
+    <div id="solution"></div>
+    <script>
+        let quadrado = document.getElementById("square-input");
+        let resultado = document.getElementById("solution");
+        let botao1 = document.getElementById("square-button");
+        botao1.addEventListener('click', function() {
+            resultado.innerHTML = 'The result of squaring the number ' + quadrado.value + ' ' + 'is ' + squareNumber(quadrado.value);
+        })
+        quadrado.addEventListener('keyup', function() {
+
+            resultado.innerHTML = 'The result of squaring the number ' + this.value + ' ' + 'is ' + squareNumber(this.value);
+        })
+        let ralf = document.getElementById("half-input");
+        ralf.addEventListener('keyup', function() {
+            resultado.innerHTML = 'Half of ' + this.value + ' is ' + halfOf(this.value);
+        })
+        let percent1 = document.getElementById("percent1-input");
+        let percent2 = document.getElementById("percent2-input");
+        let botao3 = document.getElementById("percent-button");
+        botao3.addEventListener('click', function() {
+            resultado.innerHTML = percent1.value + ' is ' + percentOf(percent1.value, percent2.value) + '% of ' + percent2.value;
+        })
+        percent1.addEventListener('keyup', function() {
+            resultado.innerHTML = percent1.value + ' is ' + percentOf(percent1.value, percent2.value) + '% of ' + percent2.value;
+        })
+        percent2.addEventListener('keyup', function() {
+            resultado.innerHTML = percent1.value + ' is ' + percentOf(percent1.value, percent2.value) + '% of ' + percent2.value;
+        })
+        let area = document.getElementById("area-input");
+        area.addEventListener('keyup', function() {
+            resultado.innerHTML = 'The area of circle with radius ' + this.value + ' is ' + areaOfCircle(this.value)
+        })
+        let botao4 = document.getElementById("area-button");
+        botao4.addEventListener('click', function() {
+            resultado.innerHTML = 'The area of circle with radius ' + area.value + ' is ' + areaOfCircle(area.value)
+        })
+
+        function squareNumber(num) {
+            var squaredNumber = num * num;
+            return squaredNumber;
+        }
+
+        function halfOf(num) {
+            var half = num / 2;
+            return half;
+        }
+
+
+        function percentOf(num1, num2) {
+            var percent = (num1 / num2) * 100;
+            console.log(num1 + ' is ' + percent + '% of ' + num2);
+            return percent;
+        }
+
+        function areaOfCircle(radius) {
+            var area = Math.PI * squareNumber(radius);
+            console.log('The area of circle with radius ' + radius + ' is ' + area);
+            return area;
+        }
+    </script>
+
+</body>
+
+</html>
