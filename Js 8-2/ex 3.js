@@ -71,12 +71,7 @@ const expected_result = [
 ]
 
 function fantasyOrScienceFictionAuthors() {    
-    // console.log(books.map( Element => Element.author.name));
-    const books2 = (books.filter( Element => Element.genre == 'Fantasia'));
-    const books3= (books.filter( Element => Element.genre == 'Ficção Científica'));
-    console.log(`${(books2.map(Element => Element.author.name))}
-    ${(books3.map(Element => Element.author.name))}`);
-
+    return (books.filter(Element => ( Element.genre == 'Fantasia') || (Element.genre == 'Ficção Científica')).map(Element => Element.author.name).sort());
 }
-fantasyOrScienceFictionAuthors();
-// assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);
+
+assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);
