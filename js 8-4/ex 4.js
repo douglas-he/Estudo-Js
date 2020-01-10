@@ -1,12 +1,13 @@
 const assert = require('assert')
 
 // escreva aqui o seu código
-class Robot{
+class Robot {
     constructor(a, b) {
         this.name = a;
-        this.active = b || false;
+        this.active = (b == undefined || b== null)? false: b;
     }
 }
+
 let robot1 = new Robot("Tars", true)
 
 assert.equal(typeof Robot.prototype, "object")
