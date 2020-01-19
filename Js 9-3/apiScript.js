@@ -2,9 +2,7 @@ const API_URL = "https://icanhazdadjoke.com/search?term=hipster";
 
 const fetchJoke = () => {
     fetch(API_URL, {
-        method : 'GET',
-        mode: 'cors',
-        headers: new Headers({
+        headers: ({
             Accept : "application/json",
     })})
     .then(response => {
