@@ -15,7 +15,8 @@ const expected = [1,2,4];
 assert.deepEqual(myRemoveWithoutCopy([1,2,3,4],3), expected);
 const expected2 = [1, 2, 3, 4];
 assert.notDeepEqual(myRemoveWithoutCopy(expected2, 3), [1, 2, 3, 4]);
-assert.deepEqual(myRemoveWithoutCopy(expected2, 3), [1, 2, 4]);
+expected3 = [ 1, 2 ,3, 4];
+assert.deepEqual(myRemoveWithoutCopy(expected3, 1), [2, 3, 4]);
 assert.deepEqual(myRemoveWithoutCopy(expected2, 5), expected2);
 
 // implemente seus testes aqui
