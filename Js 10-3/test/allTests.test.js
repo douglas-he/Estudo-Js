@@ -36,4 +36,7 @@ test('Retorna o Prorio Array sem um elemento', () => {
 test('FizzBuzz!', () => {
     expect(myFizzBuzz(15)).toEqual('fizzbuzz');
     expect(myFizzBuzz(3)).toEqual('fizz');
+    expect(myFizzBuzz(5)).toEqual('buzz');
+    expect(myFizzBuzz(7)).toEqual(7);
+    expect(myFizzBuzz('a')).toEqual(false);
 })
