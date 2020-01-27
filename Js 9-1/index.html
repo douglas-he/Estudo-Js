@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* *{
+        border: 1px solid red;
+    } */
+    body{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    #container{
+        display: flex;
+        max-width: 80%;
+        justify-content: center;
+    }
+    #text{
+        width: 70%;
+    }
+    .square{
+        height: 100px;
+        width: 100px;
+        margin: 3px;
+    }
+    .red{
+        background-color: red;
+    }
+    .black{
+        background-color: black;
+    }
+    .blue{
+        background-color: blue;
+    }
+    .purple{
+        background-color: purple;
+    }
+</style>
+<body>
+    <h3>Cor de fundo</h3>
+    <div class= 'red square clickF'></div>
+    <div class= 'black square clickF'></div>
+    <h3>Cor da letra</h3>
+    <div class= 'blue square'></div>
+    <div class= 'purple square'></div>
+    <div></div>
+    <div></div>
+    <div id="container"> 
+    <P id='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit sit amet nisl ac convallis. Etiam urna nibh, sollicitudin nec ornare lobortis, egestas in ante. Cras sed rutrum dui. Sed nec ante ante. Aliquam condimentum ultrices mauris id vulputate. Integer elementum urna at purus auctor, a blandit nulla suscipit. Praesent cursus eros quis nisl porta, eget sodales diam molestie. Aenean laoreet congue hendrerit. In quis sem et sem auctor vehicula. Maecenas dignissim, quam eget commodo euismod, justo ipsum ornare elit, eu mollis dui nulla sed diam. Nam dictum ultricies bibendum. Duis id arcu non orci scelerisque suscipit. Phasellus iaculis dui at metus aliquam pulvinar. Aenean dui enim, lobortis nec vehicula id, blandit eget lectus. Fusce dignissim diam a eros vehicula aliquam.
+
+    Cras sapien enim, imperdiet quis dignissim at, vulputate ut ligula. Maecenas metus lorem, accumsan ut metus eu, egestas egestas sapien. Aenean dictum felis vitae lorem congue consequat. Integer nec diam pretium, pulvinar enim nec, tristique risus. Ut purus elit, auctor ut venenatis quis, finibus semper urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur accumsan sem id dignissim varius. Nunc porttitor mattis lectus vel tristique. In sem dui, dictum id vestibulum quis, lobortis at metus. Phasellus tincidunt pretium tellus, ut venenatis leo scelerisque ac. Etiam elit velit, sodales sed ex ac, porta consectetur quam. Maecenas ornare enim a lorem cursus, sed molestie tellus interdum. Suspendisse dictum nibh et nisi ultrices pulvinar.
+
+    Cras sapien enim, imperdiet quis dignissim at, vulputate ut ligula. Maecenas metus lorem, accumsan ut metus eu, egestas egestas sapien. Aenean dictum felis vitae lorem congue consequat. Integer nec diam pretium, pulvinar enim nec, tristique risus. Ut purus elit, auctor ut venenatis quis, finibus semper urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur accumsan sem id dignissim varius. Nunc porttitor mattis lectus vel tristique. In sem dui, dictum id vestibulum quis, lobortis at metus. Phasellus tincidunt pretium tellus, ut venenatis leo scelerisque ac. Etiam elit velit, sodales sed ex ac, porta consectetur quam. Maecenas ornare enim a lorem cursus, sed molestie tellus interdum. Suspendisse dictum nibh et nisi ultrices pulvinar.</P>
+    </div>
+</body>
+<script>
+    const corfundo = document.querySelectorAll('.clickF')
+    const text = document.getElementById('text')
+    corfundo.forEach(element => {
+        element.addEventListener('click', ()=> {
+            console.log(event.target.style);
+        })
+    });
+</script>
+</html>
