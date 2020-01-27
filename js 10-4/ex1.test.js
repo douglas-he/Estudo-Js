@@ -4,5 +4,5 @@ const callback = jest.fn();
 
 test('callback function', ()=>{
     uppercase('a',callback);
-    expect(callback).toHaveBeenCalled()
+    expect(callback).toHaveBeenCalledWith('A');
 })
