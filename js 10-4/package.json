@@ -1,5 +1,13 @@
 {
     "scripts": {
         "test": "jest"
+    },
+    "dependencies": {
+        "request": "^2.88.0",
+        "reverse-polish-notation": "^0.1.0"
+    },
+    "devDependencies": {
+        "jest": "^25.1.0",
+        "node-fetch": "^2.6.0"
     }
 }
